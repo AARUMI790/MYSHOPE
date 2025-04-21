@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>लॉगिन करें</h2>
+    <form onsubmit="return checkLogin()">
+        <input type="text" id="username" placeholder="यूज़रनेम" required><br><br>
+        <input type="password" id="password" placeholder="पासवर्ड" required><br><br>
+        <input type="submit" value="लॉगिन">
+    </form>
+
+    <script>
+        function checkLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            if (user === "admin" && pass === "1234") {
+                window.location.href = "form.html";
+                return false;
+            } else {
+                alert("गलत यूज़रनेम या पासवर्ड!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
